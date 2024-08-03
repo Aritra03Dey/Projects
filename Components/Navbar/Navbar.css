@@ -1,0 +1,221 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Space between logo and menu */
+  padding: 16px 40px;
+  background-color: #fff; /* Bright background for contrast */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: background-color 0.3s; /* Smooth transition on hover */
+  align-items: center;
+}
+
+.navbar:hover {
+  background-color: #f8f8f8; /* Slightly darker on hover */
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ff4141; /* Bold color for the logo */
+  font-size: 38px;
+  font-weight: 700;
+  transition: transform 0.3s; /* Animation on hover */
+}
+
+.nav-logo:hover {
+  transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 40px; /* Spacing between menu items */
+  color: #333; /* Darker text color */
+  font-weight: 500;
+}
+
+.nav-menu li {
+  position: relative; /* Allow positioning of pseudo-elements */
+  cursor: pointer;
+  padding: 10px 0; /* Add vertical padding for better touch target */
+  transition: color 0.3s; /* Transition for hover color change */
+}
+
+.nav-menu li:hover {
+  color: #ff4141; /* Change color on hover */
+}
+
+.nav-menu li.active {
+  color: #ff4141; 
+  /* Highlight active item */
+}
+
+.nav-menu li::after {
+  content: "";  
+  /* Pseudo-element for underline effect  */
+  display: block;
+  width: 100%;
+  height: 3px; /* Underline thickness */
+  background: transparent; /* Initially hidden */
+  position: absolute;
+  bottom: -5px; /* Positioning the underline */
+  left: 0;
+  transform: scaleX(0); /* Initially hidden */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.nav-menu li:hover::after,
+.nav-menu li.active::after {
+  transform: scaleX(1); /* Show the underline on hover or when active */
+  background: #ff4141; /* Spicy color for underline */
+}
+
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 30px; /* Adjusted spacing */
+}
+
+.nav-login-cart button {
+  width: 157px;
+  height: 48px;
+  outline: none;
+  border: 1px solid #ff4141; /* Spicy border color */
+  border-radius: 75px; /* Rounded corners */
+  color: #ff4141; /* Spicy text color */
+  font-size: 20px;
+  font-weight: 500;
+  background: white; /* Background color */
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+.nav-login-cart button:hover {
+  background: linear-gradient(45deg, #FF6F61, #FF3D7F); /* Spicy gradient on hover */
+  color: white; /* Change text color to white */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.nav-login-cart button:active {
+  background: #e03e3e; /* Darker shade on active */
+}
+
+.nav-cart-count {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -35px;
+  margin-left: -55px;
+  border-radius: 11px;
+  font-size: 14px;
+  background: red; /* Red background for cart count */
+  color: white; /* White text for visibility */
+  font-weight: bold; /* Make text bolder for visibility */
+  position: relative; /* Maintain positioning for layout */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+@media(max-width:1280px){
+  .navbar{
+    padding:12px 50px;
+  }
+  .nav-logo img{
+    width:40px;
+  }
+  .nav-logo p{
+    font-size:25px;
+  }
+  .nav-menu{
+    gap:30px;
+    font-size:16px;
+  }
+  .nav-login-cart{
+    gap:30px;
+  }
+  .nav-login-cart button{
+    width:120px;
+    height:45px;
+    font-size:16px;
+  }
+  .nav-cart-count{
+    margin-left:-40px;
+    font-size:12px;
+
+  }
+}
+@media(max-width:1024px){
+  .navbar{
+    padding:12px 30px;
+  }
+  .nav-menu{
+    gap:25px;
+    font-size:14px;
+    margin-right: 20px; /* Add margin to the right of the nav menu */
+  }
+  .nav-login-cart{
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Add gap between the login button and other items */
+  }
+  .nav-login-cart button{
+    width:80px;
+    height:35px;
+    font-size:14px;
+  }
+  .nav-login-cart img{
+    width:30px;
+  }
+  .nav-cart-count{
+    width:18px;
+    height:18px;
+  }
+}
+
+@media(max-width:800px){
+  .navbar{
+    padding:10px 0px;
+  }
+ }
+ @media(max-width: 500px) {
+  .navbar {
+    padding: 8px 0; /* Keep minimal padding */
+    gap: 10px; /* Add gap between elements */
+    flex-direction: column; /* Stack items vertically if needed */
+  }
+
+  .nav-logo {
+    transform: scale(0.8); /* Scale down the logo */
+    margin-bottom: 5px; /* Add some space below the logo */
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row; /* Ensure horizontal layout */
+    gap: 15px; /* Adjust the gap between menu items */
+    padding: 5px 0; /* Padding for vertical alignment */
+  }
+
+  .nav-menu li {
+    font-size: 12px; /* Reduce font size for menu items */
+  }
+
+  .nav-login-cart {
+    gap: 15px; /* Adjust spacing between login and cart elements */
+  }
+
+  .nav-login-cart button {
+    width: 100px; /* Reduce button width */
+    height: 30px; /* Reduce button height */
+    font-size: 12px;
+     /* Reduce button font size */
+  }
+
+  .nav-cart-count {
+    width: 16px; /* Adjust cart count size */
+    height: 16px; /* Adjust cart count height */
+    font-size: 10px; /* Reduce font size for cart count */
+  }
+}

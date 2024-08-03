@@ -1,0 +1,56 @@
+/* Breadcrum.css */
+.breadcrum {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #333;
+  padding: 10px 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrum img {
+  margin: 0 10px;
+  width: 12px;
+  height: 12px;
+}
+
+.breadcrum span {
+  margin: 0 5px;
+  font-weight: bold;
+}
+
+.breadcrum a {
+  color: #e60023;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.breadcrum a:hover {
+  color: #c5001f;
+}
+@media(max-width:1280px){
+  .breadcrum{
+    margin:30px 50px;
+    font-size:14px;
+  }
+}
+@media(max-width:1024px){
+  .breadcrum{
+    margin:30px 30px;
+    font-size:13px;
+  }
+}
+@media(max-width:800px){
+  .breadcrum{
+    margin:30px 10px;
+    font-size:14px;
+  }
+}
+@media(max-width:500px){
+  .breadcrum{
+  font-size:12px;
+  }
+}

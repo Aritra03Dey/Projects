@@ -1,0 +1,110 @@
+.popular {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px 20px;
+  background: linear-gradient(180deg, #ffffff, #f7f7f7);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.popular h1 {
+  color: #444;
+  font-size: 50px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.popular hr {
+  width: 200px;
+  height: 6px;
+  border-radius: 10px;
+  background: #b0bec5;
+  margin-bottom: 40px;
+}
+
+.popular-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Increased gap for more spacing */
+  justify-content: center;
+  padding: 10px;
+}
+
+.popular-item div {
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  flex-basis: calc(45% - 20px); /* Default box size */
+  box-sizing: border-box;
+  color: #333;
+  font-weight: bold;
+  background: linear-gradient(145deg, #fbc2eb, #a6c1ee); /* Gradient for each item */
+}
+
+.popular-item div:nth-child(2n) {
+  background: linear-gradient(145deg, #ffecd2, #fcb69f); /* Alternate gradient */
+}
+
+.popular-item div:nth-child(3n) {
+  background: linear-gradient(145deg, #cfd9df, #e2ebf0); /* Alternate gradient */
+}
+
+.popular-item div:nth-child(4n) {
+  background: linear-gradient(145deg, #d4fc79, #96e6a1); /* Alternate gradient */
+}
+
+.popular-item div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.popular-item::after {
+  content: '';
+  flex: 1 1 calc(45% - 20px); /* Fill the blank space */
+  box-sizing: border-box;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 1280px) {
+  .popular-item div {
+    flex-basis: calc(45% - 20px); /* Adjust as needed for 1280px */
+  }
+}
+
+@media (max-width: 1024px) {
+  .popular-item div {
+    flex-basis: calc(45% - 20px); /* Adjust as needed for 1024px */
+  }
+}
+
+@media (max-width: 800px) {
+  .popular-item div {
+    flex-basis: calc(100% - 20px); /* Full width for 800px */
+  }
+  
+  .popular-item::after {
+    flex-basis: 0; /* Hide the blank space filler */
+  }
+}
+
+@media (max-width: 500px) {
+  .popular h1 {
+    font-size: 36px;
+  }
+  
+  .popular hr {
+    width: 150px;
+    height: 4px;
+  }
+  
+  .popular-item div {
+    flex-basis: calc(100% - 20px); /* Full width for 500px */
+  }
+  
+  .popular-item::after {
+    flex-basis: 0; /* Hide the blank space filler */
+  }
+}

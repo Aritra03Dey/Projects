@@ -1,0 +1,102 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px; /* Adjusted gap for better spacing */
+  background-color: #f8f8f8; /* Light background for contrast */
+  padding: 40px 20px; /* Added padding for spacing */
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Reduced gap for a tighter layout */
+}
+
+.footer-logo p {
+  color: red; /* Darker text for visibility */
+  font-size: 48px; /* Slightly larger font size */
+  font-weight: 600;
+  margin: 0; /* Removed default margin */
+}
+
+.footer-links {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Reduced gap for a more compact look */
+  color: #252525; /* Darker link color */
+  font-size: 18px; /* Adjusted font size */
+}
+
+.footer-links li {
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.footer-links li:hover {
+  color: #ff4141; /* Color change on hover */
+}
+
+.footer-social-icon {
+  display: flex;
+  gap: 15px; /* Reduced gap for a more compact look */
+}
+
+.footer-icons-container {
+  padding: 10px;
+  padding-bottom: 6px;
+  background: #fbfbfb; /* Light background for social icons */
+  border: 1px solid #e0e0e0; /* Soft border */
+  border-radius: 8px; /* Rounded corners */
+  transition: box-shadow 0.3s; /* Smooth transition for hover */
+}
+
+.footer-icons-container:hover {
+  cursor: pointer;
+  box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5); /* Box shadow on hover */
+}
+
+.footer-copyright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* Adjusted gap */
+  width: 100%;
+  margin-bottom: 20px; /* Reduced bottom margin */
+  color: #1a1a1a; /* Darker text for readability */
+  font-size: 16px; /* Slightly reduced font size */
+}
+
+.footer-copyright hr {
+  width: 80%;
+  border: none;
+  border-radius: 10px;
+  height: 3px;
+  background: #c7c7c7; /* Soft gray line */
+}
+@media(max-width:800px){
+  .footer{
+    gap:20px;
+  }
+  .footer-logo{
+    gap:10px;
+    align-items: end;
+  }
+  .footer-logo img{
+    width:40px;
+  }
+  .footer-logo p{
+    font-size: 25px;
+  }
+  .footer-links{
+    font-size:14px;
+    gap:10px;
+  }
+  .footer-social-icon img{
+    width:22px;
+  }
+  .footer-copyright{
+    font-size:13px;
+  }
+}
